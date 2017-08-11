@@ -1,0 +1,143 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Nate's Soundboard</title>
+  <meta name="description" content="Project">
+  <meta name="Nathanael Wa Mwenze" content="SitePoint">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|Irish+Grover|Lato|Zilla+Slab+Highlight" rel="stylesheet">
+    
+    <script type="text/javascript" src="js/NexusUI.js" ></script>
+        <script type="text/javascript" src="js/Tone.js" ></script>
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+    <section id="page">
+      <header>Nate's SoundBoard</header>
+      <nav>
+        <ul id="grid">
+                <li id="item1"><a href="">Play</a></li>
+                <li id="item2"><a href="">About</a></li>
+                
+            </ul>
+        </nav>
+      <main>
+          <div class="divider">
+          </div>
+<!--          Visualizer-->
+          
+          <div id="visualizergrid">
+              <div id="visualizer1">
+              </div>
+                
+          </div>
+          
+<!--          boardcontainer-->
+          
+          <div id="boardContainer">
+              <div id="button1">
+              </div>
+              <div id="button2">
+              </div>
+              <div id="button3">
+              </div>
+              <div id="button4">
+              </div>
+              <div id="button5">
+              </div>
+              <div id="button6">
+              </div>
+              <div id="button7">
+              </div>
+              <div id="button8">
+              </div>
+              <div id="button9">
+              </div>
+            
+          </div>
+            <div class="divider">
+          </div>
+          
+        </main>
+      <footer>&copy; NateKodi 2017</footer>
+    </section>
+        
+    
+    
+  <script>
+      //VISUALIZER
+      
+      var visualizer = new Nexus.Oscilloscope('visualizer1',{
+                        'size': [300,100]
+})
+      visualizer.colorize('accent',"#ddd");
+      visualizer.colorize('fill',"#295E80")
+      
+      
+
+      
+      //BUTTONS
+      
+      
+      
+
+      
+      //button1
+      var button1 = new Nexus.Button('button1');
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      //Button2
+      var button2 = new Nexus.Button('button2')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button3 = new Nexus.Button('button3')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button4 = new Nexus.Button('button4')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button5 = new Nexus.Button('button5')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button6 = new Nexus.Button('button6')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button7 = new Nexus.Button('button7')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button8 = new Nexus.Button('button8')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var button9 = new Nexus.Button('button9')
+//      button1.colorize("accent","#786f90");
+//      button1.colorize("fill","#aaa");
+      
+      var buttonia = [button1, button2, button3, button4, button5, button6, button7, button8, button9];
+//      
+            buttonia.forEach(function(button){
+                button.colorize("accent","#786f90");
+                button.colorize("fill","#aaa");
+//                
+         })
+//          
+    </script>
+</body>
+</html>
