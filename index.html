@@ -75,60 +75,43 @@
     
     
   <script>
-      //VISUALIZER
+     
+      
+    
+             //VISUALIZER
       
       var visualizer = new Nexus.Oscilloscope('visualizer1',{
                         'size': [300,100]
-})
+});
+      
       visualizer.colorize('accent',"#ddd");
-      visualizer.colorize('fill',"#295E80")
+      visualizer.colorize('fill',"#295E80");
+      
+     
+      
       
       
 
       
       //BUTTONS
-      
-      
-      
-
-      
-      //button1
+        
       var button1 = new Nexus.Button('button1');
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
       
-      //Button2
-      var button2 = new Nexus.Button('button2')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button2 = new Nexus.Button('button2');
       
-      var button3 = new Nexus.Button('button3')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button3 = new Nexus.Button('button3');
       
-      var button4 = new Nexus.Button('button4')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button4 = new Nexus.Button('button4');
       
-      var button5 = new Nexus.Button('button5')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button5 = new Nexus.Button('button5');
       
-      var button6 = new Nexus.Button('button6')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button6 = new Nexus.Button('button6');
       
-      var button7 = new Nexus.Button('button7')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button7 = new Nexus.Button('button7');
       
-      var button8 = new Nexus.Button('button8')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button8 = new Nexus.Button('button8');
       
-      var button9 = new Nexus.Button('button9')
-//      button1.colorize("accent","#786f90");
-//      button1.colorize("fill","#aaa");
+      var button9 = new Nexus.Button('button9');
       
       var buttonia = [button1, button2, button3, button4, button5, button6, button7, button8, button9];
 //      
@@ -136,8 +119,126 @@
                 button.colorize("accent","#786f90");
                 button.colorize("fill","#aaa");
 //                
-         })
-//          
+         });
+      
+      //load a whole bank of piano samples
+        var pianoSamples = new Tone.MultiPlayer([
+            "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/cabledMess_eyu5p1.wav",
+            "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/bertrof__game-sound-correct_dd5o4d.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/alienbomb__heavy-burst_jl3ybm.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/suonho__memorymoon-space-blaster-plays_jif83i.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/zeuss__the-chime_t8z02y.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/digifishmusic__sonar-ping_pafmx2.wav",
+            "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/slykmrbyches__splattt_z1yy12.mp3",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/schademans__pipe9_fcwv4v.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502494669/170331__siriuss22__yzlaugh3_x3znys.ogg",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502495235/386609__gumballworld__baby-short-laugh-5_flspxz.wav"]).toMaster();
+      
+      
+      
+      
+      
+
+      
+      button1.on('change', function(){
+          if(button1.state === true){
+              
+              pianoSamples.start(0);
+              
+              
+              
+          }
+          else {
+              pianoSamples.stop(0);
+          }
+      });
+      
+      button2.on('change', function(){
+          if(button2.state === true){
+              
+              pianoSamples.start(1);
+          }
+          else {
+              pianoSamples.stop(1);
+          }
+      });
+      
+      button3.on('change', function(){
+          if(button3.state === true){
+              
+              pianoSamples.start(2);
+          }
+          else {
+              pianoSamples.stop(2);
+          }
+      });
+      
+      button4.on('change', function(){
+          if(button4.state === true){
+              
+              pianoSamples.start(3);
+          }
+          else {
+              pianoSamples.stop(3);
+          }
+      });
+      
+      button5.on('change', function(){
+          if(button5.state === true){
+              
+              pianoSamples.start(4);
+          }
+          else {
+              pianoSamples.stop(4);
+          }
+      });
+      
+      button6.on('change', function(){
+          if(button6.state === true){
+              
+              pianoSamples.start(5);
+          }
+          else {
+              pianoSamples.stop(5);
+          }
+      });
+      
+      button7.on('change', function(){
+          if(button7.state === true){
+              
+              pianoSamples.start(6);
+          }
+          else {
+              pianoSamples.stop(6);
+          }
+      });
+      
+      button8.on('change', function(){
+          if(button8.state === true){
+              
+              pianoSamples.start(7);
+          }
+          else {
+              pianoSamples.stop(7);
+          }
+      });
+      
+      button9.on('change', function(){
+          if(button9.state === true){
+              
+              pianoSamples.start(8);
+          }
+          else {
+              pianoSamples.stop(8);
+          }
+      });
+      
+      
+
+      
+      
+      
+      
     </script>
 </body>
 </html>
