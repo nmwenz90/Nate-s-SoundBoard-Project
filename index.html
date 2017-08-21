@@ -26,8 +26,8 @@
       <header>Nate's SoundBoard</header>
       <nav>
         <ul id="grid">
-                <li id="item1"><a href="">Play</a></li>
-                <li id="item2"><a href="">About</a></li>
+                <li id="item1"><a href="https://nmwenz90.github.io/Nate-s-SoundBoard-Project/">About</a></li>
+                <li id="item2"><a href="https://21.co/natekodi/">Contact</a></li>
                 
             </ul>
         </nav>
@@ -89,10 +89,6 @@
       
      
       
-      
-      
-
-      
       //BUTTONS
         
       var button1 = new Nexus.Button('button1');
@@ -121,44 +117,58 @@
 //                
          });
       
+//     
+//      var contexter = Tone.setContext();
+//      
+      
       //load a whole bank of piano samples
         var pianoSamples = new Tone.MultiPlayer([
             "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/cabledMess_eyu5p1.wav",
-          
+            
             "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/bertrof__game-sound-correct_dd5o4d.wav",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/alienbomb__heavy-burst_jl3ybm.wav",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/suonho__memorymoon-space-blaster-plays_jif83i.wav",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/zeuss__the-chime_t8z02y.wav",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/digifishmusic__sonar-ping_pafmx2.wav",
-          
-            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/slykmrbyches__splattt_z1yy12.mp3",
-          
+            
+            "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/slykmrbyches__splattt_z1yy12.mp3",
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/schademans__pipe9_fcwv4v.wav",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502494669/170331__siriuss22__yzlaugh3_x3znys.ogg",
-          
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502495235/386609__gumballworld__baby-short-laugh-5_flspxz.wav"]).toMaster();
       
+     
       
       
+    var analyser = new Tone.Analyser("fft", 2048);
+      
+      pianoSamples.connect(analyser);
+//    
+//      var meter = new Tone.Meter("signal");
+//      
+//       var realMeter = pianoSamples.connect(analyser);
+//      
       
       
-
+//BUTTONS
       
       button1.on('change', function(){
           if(button1.state === true){
               
               pianoSamples.start(0);
-              
-              
+//              visualizer.connect(realMeter);
               
           }
           else {
               pianoSamples.stop(0);
+//              visualizer.disconnect();
+
           }
       });
       
@@ -241,6 +251,17 @@
               pianoSamples.stop(8);
           }
       });
+      
+//       buttonia.forEach(function(visualizer){
+//          pianoSamples.connect(pianoSamples);
+//      });
+      
+//      var buttonVis = function(){
+//          visualizer.connect(pianoSamples);
+//      };
+//      
+//      buttonVis(button1);
+      
       
       
 
