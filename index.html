@@ -27,7 +27,7 @@
       <nav>
         <ul id="grid">
                 <li id="item1"><a href="https://nmwenz90.github.io/Nate-s-SoundBoard-Project/">About</a></li>
-                <li id="item2"><a href="https://21.co/natekodi/">Contact</a></li>
+                <li id="item2"><a href="https://paypal.me/natekodi/">Donate</a></li>
                 
             </ul>
         </nav>
@@ -45,6 +45,7 @@
 <!--          boardcontainer-->
           
           <div id="boardContainer">
+              
               <div id="button1">
               </div>
               <div id="button2">
@@ -63,6 +64,20 @@
               </div>
               <div id="button9">
               </div>
+              <div id="button10">
+              </div>
+              <div id="button11">
+              </div>
+              <div id="button12">
+              </div>
+              <div id="button13">
+              </div>
+              <div id="button14">
+              </div>
+              <div id="button15">
+              </div>
+              <div id="button16">
+              </div>
             
           </div>
             <div class="divider">
@@ -76,7 +91,7 @@
     
   <script>
      
-      
+      Nexus.context = Tone.context
     
              //VISUALIZER
       
@@ -86,6 +101,8 @@
       
       visualizer.colorize('accent',"#ddd");
       visualizer.colorize('fill',"#295E80");
+      
+      visualizer.connect(Tone.Master)
       
      
       
@@ -109,10 +126,24 @@
       
       var button9 = new Nexus.Button('button9');
       
-      var buttonia = [button1, button2, button3, button4, button5, button6, button7, button8, button9];
+      var button10 = new Nexus.Button('button10');
+      
+      var button11 = new Nexus.Button('button11');
+      
+      var button12 = new Nexus.Button('button12');
+      
+      var button13 = new Nexus.Button('button13');
+      
+      var button14 = new Nexus.Button('button14');
+      
+      var button15 = new Nexus.Button('button15');
+      
+      var button16 = new Nexus.Button('button16');
+      
+      var buttonia = [button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16];
 //      
             buttonia.forEach(function(button){
-                button.colorize("accent","#786f90");
+                button.colorize("accent","#f7f7f7");
                 button.colorize("fill","#aaa");
 //                
          });
@@ -123,25 +154,43 @@
       
       //load a whole bank of piano samples
         var pianoSamples = new Tone.MultiPlayer([
-            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/cabledMess_eyu5p1.wav",
+            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945343/fake_aah_qxkkcr.wav",
             
-            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/bertrof__game-sound-correct_dd5o4d.wav",
+            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945342/air_em_out_dry_rjekps.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/alienbomb__heavy-burst_jl3ybm.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945342/td_echo_msymqt.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/suonho__memorymoon-space-blaster-plays_jif83i.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945342/abstract_pan_break_dtuica.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/zeuss__the-chime_t8z02y.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945341/nath_grime_wobble_qvpepz.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491936/digifishmusic__sonar-ping_pafmx2.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945340/vocal_wet_140bpm_Eb_Min_eaaioo.wav",
             
-            "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/slykmrbyches__splattt_z1yy12.mp3",
+            "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945340/ive_been_vocal_106bpm_Bb_Major_m8lfee.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502491935/schademans__pipe9_fcwv4v.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945340/chipslovey_vocals_140bpm_D_Minor_t2iyzf.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502494669/170331__siriuss22__yzlaugh3_x3znys.ogg",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503696900/8bit_lazer_dry_139bpm_v7havj.wav",
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502495235/386609__gumballworld__baby-short-laugh-5_flspxz.wav"]).toMaster();
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503697115/goubald_chop_melody_134bpm_bdsvww.wav",
+            
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503697601/creepy_pianoverb_104bpm_G_Minor_gh0wcr.wav",
+            
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503697609/multipl_123bpm_F_Minor_xfp3fq.wav",
+            
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/nkic_hamfyj.wav",
+            
+            
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/n808_bass_c_qbmrjl.wav",
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/nsnr_byakfg.wav",
+            
+        
+            
+        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/semajhat_u08uq0.wav"
+        
+        
+        
+        ]).toMaster();
       
      
       
@@ -249,6 +298,76 @@
           }
           else {
               pianoSamples.stop(8);
+          }
+      });
+      
+      button10.on('change', function(){
+          if(button10.state === true){
+              
+              pianoSamples.start(9);
+          }
+          else {
+              pianoSamples.stop(9);
+          }
+      });
+      
+      button11.on('change', function(){
+          if(button11.state === true){
+              
+              pianoSamples.start(10);
+          }
+          else {
+              pianoSamples.stop(10);
+          }
+      });
+      
+      button12.on('change', function(){
+          if(button12.state === true){
+              
+              pianoSamples.start(11);
+          }
+          else {
+              pianoSamples.stop(11);
+          }
+      });
+      
+      button13.on('change', function(){
+          if(button13.state === true){
+              
+              pianoSamples.start(12);
+          }
+          else {
+              pianoSamples.stop(12);
+          }
+      });
+      
+      button14.on('change', function(){
+          if(button14.state === true){
+              
+              pianoSamples.start(13);
+          }
+          else {
+              pianoSamples.stop(13);
+          }
+      });
+      
+      button15.on('change', function(){
+          if(button15.state === true){
+              
+              pianoSamples.start(14);
+          }
+          else {
+              pianoSamples.stop(14);
+          }
+      });
+      
+      button16.on('change', function(){
+          if(button16.state === true){
+              
+              pianoSamples.start(15);
+          }
+          else {
+              pianoSamples.stop(15);
           }
       });
       
