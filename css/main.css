@@ -27,6 +27,9 @@ body {
 
 #page > main {
     grid-area: main;
+    background-color: #eaeaea;
+background-image: url("https://www.transparenttextures.com/patterns/grunge-wall.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 #page > footer {
@@ -92,7 +95,7 @@ a:hover {
 }
 
 #item2 {
-    grid-column: auto;
+    grid-column: auto; 
 }
 
 main {
@@ -111,6 +114,10 @@ main {
     padding: 20px 30px;
     border-top-right-radius: 10%;
     border-top-left-radius: 10%;
+    -webkit-box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
+-moz-box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
+box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
+    
 }
 
 #visualizer1 {
@@ -121,14 +128,19 @@ main {
 
 #boardContainer {
     display: grid;
-    height: 700px;
-    width: 60%;
+    height: 600px;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
-    grid-template-columns: repeat(3, 0.5fr);
-    grid-template-rows: repeat(3, 2fr);
+    grid-template-columns: repeat(4, .4fr);
+    grid-template-rows: repeat(4, .4fr);
     background-color: 	#b2305c;
-    box-shadow: 0 8px 6px -6px black;
+
+
+
+    -webkit-box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
+-moz-box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
+box-shadow: -2px 6px 26px -2px rgba(0,0,0,0.53);
     border-radius: 10%;
 }
 
@@ -181,6 +193,55 @@ main {
     border-radius: 100%;
 }
 #button9 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button10 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button11 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button12 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button13 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button14 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button15 {
+    margin: auto;
+    background-color: 	#cccccc;
+    padding: 15px 15px;
+    border-radius: 100%;
+}
+
+#button16 {
     margin: auto;
     background-color: 	#cccccc;
     padding: 15px 15px;
