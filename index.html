@@ -26,7 +26,7 @@
       <header>Nate's SoundBoard</header>
       <nav>
         <ul id="grid">
-                <li id="item1"><a href="https://github.com/nmwenz90/Nate-s-SoundBoard-Project">About</a></li>
+                <li id="item1"><a href="https://nmwenz90.github.io/Nate-s-SoundBoard-Project/">About</a></li>
                 <li id="item2"><a href="https://paypal.me/natekodi/">Donate</a></li>
                 
             </ul>
@@ -84,14 +84,14 @@
           </div>
           
         </main>
-      <footer>&copy; Nathanael Wa Mwenze 2017</footer>
+      <footer>&copy; NateKodi 2017</footer>
     </section>
         
     
     
   <script>
      
-      Nexus.context = Tone.context
+       var cxt = Nexus.context = Tone.context;
     
              //VISUALIZER
       
@@ -102,43 +102,75 @@
       visualizer.colorize('accent',"#ddd");
       visualizer.colorize('fill',"#295E80");
       
-      visualizer.connect(Tone.Master)
+      visualizer.connect(Tone.Master);
       
      
       
       //BUTTONS
         
-      var button1 = new Nexus.Button('button1');
+      var button1 = new Nexus.Button('button1', {
+          'size':[70,70]
+      });
       
-      var button2 = new Nexus.Button('button2');
+      var button2 = new Nexus.Button('button2', {
+          'size':[70,70]
+      });
       
-      var button3 = new Nexus.Button('button3');
+      var button3 = new Nexus.Button('button3', {
+          'size':[70,70]
+      });
       
-      var button4 = new Nexus.Button('button4');
+      var button4 = new Nexus.Button('button4', {
+          'size':[70,70]
+      });
       
-      var button5 = new Nexus.Button('button5');
+      var button5 = new Nexus.Button('button5', {
+          'size':[70,70]
+      });
       
-      var button6 = new Nexus.Button('button6');
+      var button6 = new Nexus.Button('button6', {
+          'size':[70,70]
+      });
       
-      var button7 = new Nexus.Button('button7');
+      var button7 = new Nexus.Button('button7', {
+          'size':[70,70]
+      });
       
-      var button8 = new Nexus.Button('button8');
+      var button8 = new Nexus.Button('button8', {
+          'size':[70,70]
+      });
       
-      var button9 = new Nexus.Button('button9');
+      var button9 = new Nexus.Button('button9', {
+          'size':[70,70]
+      });
       
-      var button10 = new Nexus.Button('button10');
+      var button10 = new Nexus.Button('button10', {
+          'size':[70,70]
+      });
       
-      var button11 = new Nexus.Button('button11');
+      var button11 = new Nexus.Button('button11', {
+          'size':[70,70]
+      });
       
-      var button12 = new Nexus.Button('button12');
+      var button12 = new Nexus.Button('button12', {
+          'size':[70,70]
+      });
       
-      var button13 = new Nexus.Button('button13');
+      var button13 = new Nexus.Button('button13', {
+          'size':[70,70]
+      });
       
-      var button14 = new Nexus.Button('button14');
+      var button14 = new Nexus.Button('button14', {
+          'size':[70,70]
+      });
       
-      var button15 = new Nexus.Button('button15');
+      var button15 = new Nexus.Button('button15', {
+          'size':[70,70]
+      });
       
-      var button16 = new Nexus.Button('button16');
+      var button16 = new Nexus.Button('button16', {
+          'size':[70,70]
+      });
       
       var buttonia = [button1, button2, button3, button4, button5, button6, button7, button8, button9, button10, button11, button12, button13, button14, button15, button16];
 //      
@@ -181,7 +213,7 @@
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/nkic_hamfyj.wav",
             
             
-        "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/n808_bass_c_qbmrjl.wav",
+        "http://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/n808_bass_c_qbmrjl.wav",
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/nsnr_byakfg.wav",
             
         
@@ -371,15 +403,6 @@
           }
       });
       
-//       buttonia.forEach(function(visualizer){
-//          pianoSamples.connect(pianoSamples);
-//      });
-      
-//      var buttonVis = function(){
-//          visualizer.connect(pianoSamples);
-//      };
-//      
-//      buttonVis(button1);
       
       
       
