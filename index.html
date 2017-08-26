@@ -186,6 +186,7 @@
       
       //load a whole bank of piano samples
         var pianoSamples = new Tone.MultiPlayer([
+            
             "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945343/fake_aah_qxkkcr.wav",
             
             "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1502945342/air_em_out_dry_rjekps.wav",
@@ -214,6 +215,7 @@
             
             
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/n808_bass_c_qbmrjl.wav",
+            
         "https://res.cloudinary.com/dvwvkt7iq/video/upload/v1503695977/nsnr_byakfg.wav",
             
         
@@ -227,9 +229,9 @@
      
       
       
-    var analyser = new Tone.Analyser("fft", 2048);
+//    var analyser = new Tone.Analyser("fft", 2048);
       
-      pianoSamples.connect(analyser);
+//      pianoSamples.connect(analyser);
 //    
 //      var meter = new Tone.Meter("signal");
 //      
